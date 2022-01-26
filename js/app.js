@@ -1,18 +1,7 @@
-var degrees = 5;
-var howFast = 1;
-function rotate(elementToRotate, deg){
-    var element = document.getElementById(elementToRotate);
-    element.style.transform = 'rotate('+ deg + 'deg)';
-    changeDegrees();
-}
+import Rotator from './rotator.js';
 
-function changeDegrees(){
-    degrees += howFast;
-    if(degrees > 360){
-        degrees = degrees - 360;
-    }
-}
+var rotate = new Rotator(20);
 
 setInterval(()=>{
-    rotate("piechart", degrees)
+    rotate.rotate("piechart", rotate.degrees)
     }, 1);
