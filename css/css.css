@@ -1,19 +1,49 @@
-.piechart {
-    margin-top: 500px;
-    display: block;
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    border-radius: 500%;
-    background-image: conic-gradient(
-        pink 70deg, 
-        lightblue 0 235deg, 
-        orange 0);
+html, body{
+    margin: 0;
+    
 }
 
-body,
-.piechart {
-    display: flex;
-    justify-content: center;
+.center{
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
     align-items: center;
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 80vw 20vw;
+    grid-template-rows: auto;
+    min-height: 100vh;            
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    background-color: green;
+}
+
+.main_content{
+    width: 80vh;
+    height: 80vh;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
+.pie_chart{
+    border-radius: 50%;
+    background-color: aqua;
+    width: 40vh;
+    height: 40vh;
+}
+
+.right{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    background-color: red;
 }

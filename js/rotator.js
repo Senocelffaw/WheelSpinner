@@ -20,4 +20,7 @@ export default class Rotator{
         }
     }
 
+    setSpeed(newSpeed){
+        this.howFast = newSpeed;
+    }
 }
