@@ -1,29 +1,15 @@
 import Rotator from './rotator.js';
+import TimedRotation from './TimedRotation.js';
 
-var rotate = new Rotator(5);
-
-var stop1;
-var stop2;
+var toRotate = document.getElementById("pie_chart");
 var buttonId = document.getElementById("start");
 
-function startInterval(){
-    stop1 = setInterval(()=>{
-        rotate.rotate("pie_chart", rotate.degrees)
-        }, 10);
-    
-    stop2 = setInterval(()=>{
-        rotate.setSpeed(rotate.howFast - 1);
-        if(rotate.howFast <= 0){
-            clearInterval(stop1);
-            clearInterval(stop2);
-        }
-    }, 1000);
-}
+var rotating = new TimedRotation(toRotate, 5);
+
 
 
 buttonId.addEventListener('click', ()=>{
 
-    rotate.setSpeed(5);
-    startInterval();
-    
+    rotating.rotate(5);
+
 });

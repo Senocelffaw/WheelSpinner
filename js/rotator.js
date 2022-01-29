@@ -1,26 +1,29 @@
 export default class Rotator{
 
     degrees = 0;
-    howFast = 1;
+    speed;
+    toRotate;
 
-    constructor(speed){
-        this.howFast = speed;
+    constructor(elementToRotate, speed){
+        this.speed = speed;
+        this.toRotate = elementToRotate;
     }
 
-    rotate(elementToRotate, deg){
-        var element = document.getElementById(elementToRotate);
-        element.style.transform = 'rotate('+ deg + 'deg)';
+    rotate(){
+        this.toRotate.style.transform = 'rotate('+ this.degrees + 'deg)';
         this.changeDegrees();
     }
 
     changeDegrees(){
-        this.degrees += this.howFast;
+        this.degrees += this.speed;
         if(this.degrees > 360){
             this.degrees = this.degrees - 360;
         }
     }
 
     setSpeed(newSpeed){
-        this.howFast = newSpeed;
+        this.speed = newSpeed;
     }
+
+    
 }
