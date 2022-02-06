@@ -9,13 +9,28 @@
 </head>
   
 <body>
+
     <div class="container">
         <div class="main center">
-            <div class="main_content center">
-                <div id='pie_chart' class="pie_chart ">asd</div>
+            <div class="mainContent center">
+                <div id='pieChart' class="pieChart">
+                    <div id="textDivisons" class="absolute">a</div>
+                </div>
             </div>
         </div>
+
         <div class="right center">
+            <div class="relative">
+                <div class="child center">
+                    <input type="text" class="menu" placeholder="Add Task" id="taskToAdd">
+                    <button id="addTask" class="menu">Add</button>
+
+                    <select name="Task" class="menu" id="toRemove" placeholder="Remove Task">
+                        <option value="" disabled selected hidden>Select Task</option>
+                    </select>
+                    <button id="removeTask" class="menu">Remove</button>
+                </div>  
+            </div>
             <button id="start">Start</button>
         </div>
     </div>

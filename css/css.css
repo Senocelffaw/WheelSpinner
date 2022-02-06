@@ -1,6 +1,5 @@
 html, body{
     margin: 0;
-    
 }
 
 .center{
@@ -22,10 +21,10 @@ html, body{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
-    background-color: green;
+    background-color: rgb(17, 22, 17);
 }
 
-.main_content{
+.mainContent{
     width: 80vh;
     height: 80vh;
 
@@ -34,9 +33,10 @@ html, body{
     grid-template-rows: auto;
 }
 
-.pie_chart{
+.pieChart{
+    position: relative;
     border-radius: 50%;
-    background-color: aqua;
+    background-color: rgb(48, 85, 85);
     width: 40vh;
     height: 40vh;
 }
@@ -45,5 +45,40 @@ html, body{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
-    background-color: red;
+    background-color: rgb(71, 22, 22);
+}
+
+.absolute{
+    position: absolute;
+    left: 75%;
+    top: 50%;
+}
+
+.relative{
+    margin: 0;
+    position: relative;
+    width: 80%;
+}
+
+.child{
+    display: grid;
+    width: 100%;
+}
+
+.menu{
+    margin: 2px;
+    position: relative;
+    width: 100%;
+}
+
+#addTask{
+    width: 50%;
+}
+
+#toRemove{
+    margin-top: 55px;
+}
+
+#removeTask{
+    width: 50%;
 }
