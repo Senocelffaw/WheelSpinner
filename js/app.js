@@ -21,13 +21,20 @@ buttonId.addEventListener('click', ()=>{
 
 addButtom.addEventListener('click', ()=>{
 
-    wheel.addToList(taskText.value);
+    if(taskText.value != ""){
+        wheel.addToList(taskText.value);
+        taskText.value = "";
+        taskText.focus();
+        wheel.updateWheel();
+    }
 
 });
 
 removeButtom.addEventListener('click', ()=>{
-
-    wheel.removeFromList(toRemove.options[toRemove.selectedIndex].text);
-    toRemove.remove(toRemove.selectedIndex);
+    if(toRemove.options.length > 1){
+        wheel.removeFromList(toRemove.options[toRemove.selectedIndex].text);
+        toRemove.remove(toRemove.selectedIndex);
+        wheel.updateWheel();
+    }
 
 });
