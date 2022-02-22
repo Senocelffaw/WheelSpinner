@@ -27,7 +27,7 @@ html, body{
 .mainContent{
     width: 80vh;
     height: 80vh;
-
+    position: relative;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -36,8 +36,8 @@ html, body{
 .pieChart{
     position: relative;
     border-radius: 50%;
-    width: 50vh;
-    height: 50vh;
+    width: 45vh;
+    height: 45vh;
 }
 
 #pieBackground{
@@ -61,7 +61,7 @@ html, body{
     transform-origin: 0% 50%;
     left: 50%;
     top: calc(50% - 9.625px);
-    padding-left: 100px;
+    padding-left: 10vh;
 }
 
 .relative{
@@ -91,4 +91,12 @@ html, body{
 
 #removeTask{
     width: 50%;
+}
+
+#arrow{
+    height: 3vh;
+    width: 3vh;
+    position: absolute;
+    left: calc(50% - 1.5vh);
+    top: 14vh;
 }

@@ -10,7 +10,7 @@ export default class Wheel{
     wheelListOption = new Array;
     wheelListElement = new Array;
 
-    colours = ["red", "blue", "yellow", "Green", "white", "teal", "AliceBlue", "CornflowerBlue", "Cornsilk", "Gainsboro"];
+    colours = ["#72B01D", "#E9F1F7", "#5F4842", "#508AA8", "#3F7D20", "#E75A7C", "#DDA448", "#47682C", "#CE84AD", "#EB5160"];
 
 
     constructor(DOMElement, speed, selectElement, DOMBackground){
